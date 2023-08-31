@@ -11,7 +11,7 @@ class Room:
     def add_guest(self, input_guest):
         if self.check_capacity():
             self.singers.append(input_guest.name)
-            self.charge_entry()
+            self.charge_entry(input_guest)
 
     def kick_guest(self, input_guest):
         self.singers.remove(input_guest.name)
@@ -22,5 +22,6 @@ class Room:
     def check_capacity(self):
         return (len(self.singers) <  self.capacity)
     
-    def charge_entry(self):
+    def charge_entry(self, input_guest):
+        input_guest.pay_with_wallet(self.entry_fee)
         self.till += self.entry_fee

@@ -6,3 +6,6 @@ class Guest:
 
     def pay_with_wallet(self, input_amount):
         self.wallet -= input_amount
+
+    def check_wallet_sufficient_cash_to_pay(self, input_amount):
+        return(self.wallet >= input_amount)

@@ -74,5 +74,6 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Nightwish", self.room_2.songs[1].artist)
 
     def test_charge_entry(self):
-        self.room_2.charge_entry()
+        self.room_2.charge_entry(self.guest_1)
         self.assertEqual(420, self.room_2.till)
+        self.assertEqual(280, self.guest_1.wallet)
