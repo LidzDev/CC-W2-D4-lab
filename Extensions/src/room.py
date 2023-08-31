@@ -23,5 +23,6 @@ class Room:
         return (len(self.singers) <  self.capacity)
     
     def charge_entry(self, input_guest):
-        input_guest.pay_with_wallet(self.entry_fee)
-        self.till += self.entry_fee
+        if (input_guest.check_wallet_sufficient_cash_to_pay(self.entry_fee)):
+                input_guest.pay_with_wallet(self.entry_fee)
+                self.till += self.entry_fee
