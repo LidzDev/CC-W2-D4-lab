@@ -7,7 +7,8 @@ class Room:
         self.songs = []
 
     def add_guest(self, input_guest):
-        self.singers.append(input_guest.name)
+        if self.check_capacity():
+            self.singers.append(input_guest.name)
 
     def kick_guest(self, input_guest):
         self.singers.remove(input_guest.name)

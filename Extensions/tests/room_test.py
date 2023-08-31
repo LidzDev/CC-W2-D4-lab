@@ -26,6 +26,10 @@ class TestRoom(unittest.TestCase):
 
     def test_room_can_add_guest(self):
         self.assertEqual(True, self.room_2.check_capacity())
+        self.room_2.add_guest(self.guest_1)
+        self.room_2.add_guest(self.guest_2)
+        self.room_2.add_guest(self.guest_3)
+        self.assertEqual(False, self.room_2.check_capacity())       
 
     def test_add_guest(self):
         self.room_1.add_guest(self.guest_1)
