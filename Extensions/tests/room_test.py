@@ -27,6 +27,9 @@ class TestRoom(unittest.TestCase):
     def test_room_has_entry_fee(self):
         self.assertEqual(10, self.room_1.entry_fee)
 
+    def test_room_has_till(self):
+        self.assertEqual(400, self.room_2.till)
+
     def test_room_can_add_guest(self):
         self.assertEqual(True, self.room_2.check_capacity())
         self.room_2.add_guest(self.guest_1)
