@@ -5,11 +5,11 @@ class Room:
         self.singers = []
         self.songs = []
 
-    def add_guest():
-        pass
+    def add_guest(self, input_guest):
+        self.singers.append(input_guest.name)
 
-    def kick_guest():
-        pass
+    def kick_guest(self, input_guest):
+        self.singers.remove(input_guest.name)
 
     def add_song():
         pass
