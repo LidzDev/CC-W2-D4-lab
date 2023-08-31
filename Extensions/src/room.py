@@ -1,9 +1,10 @@
 class Room:
 
-    def __init__(self, input_name, input_capacity, input_entry_fee):
+    def __init__(self, input_name, input_capacity, input_entry_fee, input_till):
         self.name = input_name
         self.capacity = input_capacity
         self.entry_fee = input_entry_fee
+        self.till = input_till
         self.singers = []
         self.songs = []
 
