@@ -14,3 +14,6 @@ class Room:
 
     def add_song(self, input_song):
         self.songs.append(input_song)
+
+    def check_capacity(self):
+        return (len(self.singers) <  self.capacity)
