@@ -11,6 +11,7 @@ class Room:
     def add_guest(self, input_guest):
         if self.check_capacity():
             self.singers.append(input_guest.name)
+            self.charge_entry()
 
     def kick_guest(self, input_guest):
         self.singers.remove(input_guest.name)
