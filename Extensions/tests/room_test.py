@@ -77,3 +77,6 @@ class TestRoom(unittest.TestCase):
         self.room_2.charge_entry(self.guest_1)
         self.assertEqual(420, self.room_2.till)
         self.assertEqual(280, self.guest_1.wallet)
+        self.room_2.charge_entry(self.guest_2)
+        self.assertEqual(420, self.room_2.till)   
+        self.assertEqual(10, self.guest_2.wallet)           
