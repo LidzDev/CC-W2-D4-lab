@@ -30,3 +30,12 @@ class TestRoom(unittest.TestCase):
         self.assertEqual("Morag", self.room_1.singers[0])
         self.room_1.kick_guest(self.guest_3)
         self.assertEqual(0, len(self.room_1.singers))
+
+    def test_kick_multiple_guests(self):
+        self.room_1.add_guest(self.guest_1)
+        self.room_1.add_guest(self.guest_2)
+        self.room_1.add_guest(self.guest_3)
+        self.assertEqual(3, len(self.room_1.singers))
+        self.room_1.kick_guest(self.guest_2)
+        self.room_1.kick_guest(self.guest_3)
+        self.assertEqual("John", self.room_1.singers[0])
