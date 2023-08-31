@@ -6,7 +6,7 @@ Your program should be test driven and should be able to:
 
 V- Create rooms, songs and guests
 V Check in guests to rooms/Check out guests from rooms
-- Add songs to rooms
+V - Add songs to rooms
 
 ### Extensions
 
