@@ -72,3 +72,7 @@ class TestRoom(unittest.TestCase):
         self.assertEqual(2, len(self.room_2.songs))
         self.assertEqual("Fake It", self.room_1.songs[0].name)
         self.assertEqual("Nightwish", self.room_2.songs[1].artist)
+
+    def test_charge_entry(self):
+        self.room_2.charge_entry()
+        self.assertEqual(420, self.room_2.till)

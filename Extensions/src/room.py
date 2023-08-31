@@ -20,3 +20,6 @@ class Room:
 
     def check_capacity(self):
         return (len(self.singers) <  self.capacity)
+    
+    def charge_entry(self):
+        self.till += self.entry_fee
