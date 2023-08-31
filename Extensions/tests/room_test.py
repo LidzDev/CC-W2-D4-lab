@@ -7,14 +7,13 @@ class TestRoom(unittest.TestCase):
     def setUp(self):
         self.room_1 = Room("Black Room", 5, 10, 500)
         self.room_2 = Room("Red Room", 2, 20, 400)
-        self.guest_1 = Guest("John", 300)
-        self.guest_2 = Guest("Jack", 10)
-        self.guest_3 = Guest("Morag", 50)
         self.song_1 = Song("Fake It", "Seether")
         self.song_2 = Song("Nemo", "Nightwish")
         self.song_3 = Song("Leaves", "the Gathering")
-        # self.singers = []
-        # self.songs = []
+        self.guest_1 = Guest("John", 300, Song("Thunder", "Imagine Dragons"))
+        self.guest_2 = Guest("Jack", 10, self.song_2)
+        self.guest_3 = Guest("Morag", 50, self.song_3)
+
 
     def test_room_has_name(self):
         self.assertEqual("Black Room", self.room_1.name)
