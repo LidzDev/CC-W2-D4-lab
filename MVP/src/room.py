@@ -11,5 +11,5 @@ class Room:
     def kick_guest(self, input_guest):
         self.singers.remove(input_guest.name)
 
-    def add_song():
-        pass
+    def add_song(self, input_song):
+        self.songs.append(input_song)
