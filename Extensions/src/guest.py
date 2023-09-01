@@ -14,4 +14,4 @@ class Guest:
     def check_for_fav_song(self, input_playlist): 
         if self.fav_song in input_playlist:
             return("Whooo")
-    
+
