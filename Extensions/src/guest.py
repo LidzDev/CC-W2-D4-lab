@@ -10,3 +10,8 @@ class Guest:
 
     def check_wallet_sufficient_cash_to_pay(self, input_amount):
         return(self.wallet >= input_amount)
+
+    def check_for_fav_song(self, input_playlist): 
+        if self.fav_song in input_playlist:
+            return("Whooo")
+    
